@@ -1,0 +1,152 @@
+{
+  "nodes": [
+    {
+      "nodeData": {
+        "codeText": "import numpy as np\r\nclass TimeSeriesGenerator:\r\n    def __init__(self, seed=None):\r\n        \u0022\u0022\u0022\r\n        Initialize the generator with an optional random seed.\r\n        \u0022\u0022\u0022\r\n        self.seed = seed\r\n        if self.seed is not None:\r\n            np.random.seed(self.seed)\r\n\r\n    def generate_time_series(self, n_points=100):\r\n        \u0022\u0022\u0022\r\n        Generate random time series data (random walk).\r\n\r\n        Parameters:\r\n            n_points (int): Number of data points.\r\n\r\n        Returns:\r\n            np.ndarray: Generated time series values.\r\n        \u0022\u0022\u0022\r\n        return np.cumsum(np.random.randn(n_points))\r\n",
+        "maxInputNumber": 5,
+        "maxOutputNumber": 5,
+        "documentationText": "",
+        "nodeCathegory": 2,
+        "id": 1,
+        "settings": {
+          "objectifable": false,
+          "canBeMain": true,
+          "inputNumber": 0,
+          "outputNumber": 1,
+          "inputParametersEditorEnabled": false,
+          "outputParametersEditorEnabled": true,
+          "selectedInputConnectionSettings": {
+            "id": 0,
+            "title": null,
+            "connecttionType": 0
+          },
+          "inputConnectionSettings": [],
+          "selectedOutputConnectionSettings": {
+            "id": 1,
+            "title": "generate_time_series",
+            "connecttionType": 0
+          },
+          "outputConnectionSettings": [
+            {
+              "id": 1,
+              "title": "generate_time_series",
+              "connecttionType": 0
+            }
+          ],
+          "description": "TimeSeriesGenerator",
+          "isMain": false,
+          "inObjectiveManner": false
+        },
+        "nodeCategory": 3
+      },
+      "locationX": 307,
+      "locationY": 356
+    },
+    {
+      "nodeData": {
+        "codeText": "import matplotlib.pyplot as plt\r\nclass TimeSeriesPlotter:\r\n    def __init__(self):\r\n        \u0022\u0022\u0022\r\n        Plotter initialization (no state needed, but kept for extensibility).\r\n        \u0022\u0022\u0022\r\n        pass\r\n\r\n    def plot_time_series_and_hist(self, values):\r\n        \u0022\u0022\u0022\r\n        Plot a time series line chart and histogram for given values.\r\n\r\n        Parameters:\r\n            values (array-like): Time series values.\r\n        \u0022\u0022\u0022\r\n        fig, axes = plt.subplots(1, 2, figsize=(12, 4))\r\n\r\n        # Time series plot\r\n        axes[0].plot(values)\r\n        axes[0].set_title(\u0022Random Time Series\u0022)\r\n        axes[0].set_xlabel(\u0022Time\u0022)\r\n        axes[0].set_ylabel(\u0022Value\u0022)\r\n\r\n        # Histogram\r\n        axes[1].hist(values, bins=20)\r\n        axes[1].set_title(\u0022Histogram of Values\u0022)\r\n        axes[1].set_xlabel(\u0022Value\u0022)\r\n        axes[1].set_ylabel(\u0022Frequency\u0022)\r\n\r\n        plt.tight_layout()\r\n        plt.show()",
+        "maxInputNumber": 5,
+        "maxOutputNumber": 5,
+        "documentationText": "",
+        "nodeCathegory": 2,
+        "id": 2,
+        "settings": {
+          "objectifable": false,
+          "canBeMain": true,
+          "inputNumber": 1,
+          "outputNumber": 1,
+          "inputParametersEditorEnabled": true,
+          "outputParametersEditorEnabled": true,
+          "selectedInputConnectionSettings": {
+            "id": 2,
+            "title": "Data",
+            "connecttionType": 0
+          },
+          "inputConnectionSettings": [
+            {
+              "id": 2,
+              "title": "Data",
+              "connecttionType": 0
+            }
+          ],
+          "selectedOutputConnectionSettings": {
+            "id": 3,
+            "title": "plot_time_series_and_hist",
+            "connecttionType": 0
+          },
+          "outputConnectionSettings": [
+            {
+              "id": 3,
+              "title": "plot_time_series_and_hist",
+              "connecttionType": 0
+            }
+          ],
+          "description": "TimeSeriesPlotter",
+          "isMain": false,
+          "inObjectiveManner": false
+        },
+        "nodeCategory": 3
+      },
+      "locationX": 557,
+      "locationY": 219
+    },
+    {
+      "nodeData": {
+        "codeText": "#\u003Cblocks_def\u003E\r\nfrom TimeSeriesGenerator import TimeSeriesGenerator\r\nfrom TimeSeriesPlotter import TimeSeriesPlotter\r\n#\u003Cend_of_block_defs\u003E\r\ndef main():\r\n#\u003Cblocks_call\u003E\r\n Data = TimeSeriesGenerator()\r\n Parameter = TimeSeriesPlotter()\r\n\r\n data_1 = Data.generate_time_series()\r\n Parameter.plot_time_series_and_hist(data_1)\r\n#\u003Cend_of_block_calls\u003E\r\n print(\u0027Done\u0027)\r\nif __name__==\u0022__main__\u0022:\r\n main()",
+        "maxInputNumber": 5,
+        "maxOutputNumber": 0,
+        "documentationText": "",
+        "nodeCathegory": 2,
+        "id": 3,
+        "settings": {
+          "objectifable": false,
+          "canBeMain": true,
+          "inputNumber": 1,
+          "outputNumber": 0,
+          "inputParametersEditorEnabled": true,
+          "outputParametersEditorEnabled": false,
+          "selectedInputConnectionSettings": {
+            "id": 4,
+            "title": "Parameter",
+            "connecttionType": 0
+          },
+          "inputConnectionSettings": [
+            {
+              "id": 4,
+              "title": "Parameter",
+              "connecttionType": 0
+            }
+          ],
+          "selectedOutputConnectionSettings": {
+            "id": 0,
+            "title": null,
+            "connecttionType": 0
+          },
+          "outputConnectionSettings": [],
+          "description": null,
+          "isMain": true,
+          "inObjectiveManner": false
+        },
+        "nodeCategory": 3
+      },
+      "locationX": 938,
+      "locationY": 139
+    }
+  ],
+  "connections": [
+    {
+      "sourceNodeId": 1,
+      "sourceConnectorIndex": 0,
+      "targetNodeId": 2,
+      "targetConnectorIndex": 0,
+      "isChosen": false
+    },
+    {
+      "sourceNodeId": 2,
+      "sourceConnectorIndex": 0,
+      "targetNodeId": 3,
+      "targetConnectorIndex": 0,
+      "isChosen": false
+    }
+  ]
+}

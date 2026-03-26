@@ -1,0 +1,22 @@
+[
+  {
+    "File": "C:\\Users\\Adam\\Desktop\\CATNIPPROJ\\CatnipProj2OOPVenv\\main.py",
+    "Line": 7,
+    "Condition": null
+  },
+  {
+    "File": "C:\\Users\\Adam\\Desktop\\CATNIPPROJ\\CatnipProj2OOPVenv\\main.py",
+    "Line": 9,
+    "Condition": null
+  },
+  {
+    "File": "C:\\Users\\Adam\\Desktop\\CATNIPPROJ\\CatnipProj2OOPVenv\\TimeSeriesGenerator.py",
+    "Line": 21,
+    "Condition": null
+  },
+  {
+    "File": "C:\\Users\\Adam\\Desktop\\CATNIPPROJ\\CatnipProj2OOPVenv\\TimeSeriesPlotter.py",
+    "Line": 19,
+    "Condition": null
+  }
+]

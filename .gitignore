@@ -1,0 +1,25 @@
+# CatNip
+*.bkpmeta
+breakpoints.json
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.env
+.venv
+env/
+venv/
+ENV/
+.Python
+*.pyc
+*.pyd
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+pip-log.txt
