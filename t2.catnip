@@ -2,7 +2,7 @@
   "nodes": [
     {
       "nodeData": {
-        "codeText": "import numpy as np\r\nclass TimeSeriesGenerator:\r\n    def __init__(self, seed=None):\r\n        \u0022\u0022\u0022\r\n        Initialize the generator with an optional random seed.\r\n        \u0022\u0022\u0022\r\n        self.seed = seed\r\n        if self.seed is not None:\r\n            np.random.seed(self.seed)\r\n\r\n    def generate_time_series(self, n_points=100):\r\n        \u0022\u0022\u0022\r\n        Generate random time series data (random walk).\r\n\r\n        Parameters:\r\n            n_points (int): Number of data points.\r\n\r\n        Returns:\r\n            np.ndarray: Generated time series values.\r\n        \u0022\u0022\u0022\r\n        return np.cumsum(np.random.randn(n_points))\r\n",
+        "codeText": "import numpy as np\r\nclass TimeSeriesGenerator:\r\n    def __init__(self, seed=None):\r\n        \u0022\u0022\u0022\r\n        Initialize the generator with an optional random seed.\r\n        \u0022\u0022\u0022\r\n        self.seed = seed\r\n        if self.seed is not None:\r\n            np.random.seed(self.seed)\r\n\r\n    def generate_time_series(self, n_points=200):\r\n        \u0022\u0022\u0022\r\n        Generate random time series data (random walk).\r\n\r\n        Parameters:\r\n            n_points (int): Number of data points.\r\n\r\n        Returns:\r\n            np.ndarray: Generated time series values.\r\n        \u0022\u0022\u0022\r\n        return np.cumsum(np.random.randn(n_points))\r\n",
         "maxInputNumber": 5,
         "maxOutputNumber": 5,
         "documentationText": "",
@@ -35,9 +35,11 @@
           ],
           "description": "TimeSeriesGenerator",
           "isMain": false,
-          "inObjectiveManner": false
+          "inObjectiveManner": false,
+          "shellType": "Local Shell (system Python)"
         },
-        "nodeCategory": 3
+        "nodeCategory": 3,
+        "title": "Python code"
       },
       "locationX": 307,
       "locationY": 356
@@ -83,9 +85,11 @@
           ],
           "description": "TimeSeriesPlotter",
           "isMain": false,
-          "inObjectiveManner": false
+          "inObjectiveManner": false,
+          "shellType": "Local Shell (system Python)"
         },
-        "nodeCategory": 3
+        "nodeCategory": 3,
+        "title": "Python code"
       },
       "locationX": 557,
       "locationY": 219
@@ -125,9 +129,11 @@
           "outputConnectionSettings": [],
           "description": null,
           "isMain": true,
-          "inObjectiveManner": false
+          "inObjectiveManner": false,
+          "shellType": "Local Shell (system Python)"
         },
-        "nodeCategory": 3
+        "nodeCategory": 3,
+        "title": "Python code"
       },
       "locationX": 938,
       "locationY": 139
