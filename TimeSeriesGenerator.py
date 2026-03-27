@@ -8,7 +8,7 @@ class TimeSeriesGenerator:
         if self.seed is not None:
             np.random.seed(self.seed)
 
-    def generate_time_series(self, n_points=100):
+    def generate_time_series(self, n_points=200):
         """
         Generate random time series data (random walk).
 
